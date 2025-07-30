@@ -1,0 +1,57 @@
+<!-- FORMULIR DATA DIRI CALON TURIS -->
+<div class="flowchart" style="margin-top: 3rem;">
+    <h2>Formulir Data Diri Calon Turis</h2>
+    <p>Isi informasi di bawah ini untuk membantu kami merencanakan perjalanan terbaik untuk Anda.</p>
+
+    <form action="#" method="post" style="margin-top: 1.5rem;">
+        <div style="margin-bottom: 1rem;">
+            <label for="nama">Nama Lengkap:</label><br>
+            <input type="text" id="nama" name="nama" required style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 8px;">
+        </div>
+
+        <div style="margin-bottom: 1rem;">
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 8px;">
+        </div>
+
+        <div style="margin-bottom: 1rem;">
+            <label for="telepon">Nomor Telepon:</label><br>
+            <input type="tel" id="telepon" name="telepon" required style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 8px;">
+        </div>
+
+        <div style="margin-bottom: 1rem;">
+            <label for="tanggal_lahir">Tanggal Lahir:</label><br>
+            <input type="date" id="tanggal_lahir" name="tanggal_lahir" required style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 8px;">
+        </div>
+
+        <div style="margin-bottom: 1rem;">
+            <label for="negara">Negara Asal:</label><br>
+            <input type="text" id="negara" name="negara" required style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 8px;">
+        </div>
+
+        <div style="margin-bottom: 1rem;">
+            <label for="jumlah">Jumlah Orang:</label><br>
+            <input type="number" id="jumlah" name="jumlah" min="1" required style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 8px;">
+        </div>
+
+        <div style="margin-bottom: 1rem;">
+            <label for="preferensi">Preferensi Wisata:</label><br>
+            <select id="preferensi" name="preferensi" style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 8px;">
+                <option value="pantai">Pantai</option>
+                <option value="pegunungan">Pegunungan</option>
+                <option value="kota">Kota</option>
+                <option value="budaya">Budaya & Sejarah</option>
+                <option value="lainnya">Lainnya</option>
+            </select>
+        </div>
+
+        <div style="margin-bottom: 1rem;">
+            <label for="catatan">Catatan Tambahan:</label><br>
+            <textarea id="catatan" name="catatan" rows="4" style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 8px;"></textarea>
+        </div>
+
+        <button type="submit" style="background-color: #40E0D0; color: white; padding: 1rem 2rem; border: none; border-radius: 8px; font-weight: 600; cursor: pointer;">
+            Kirim Formulir
+        </button>
+    </form>
+</div>

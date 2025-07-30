@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmad-Travel </title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F8F8F8;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(135deg, #40E0D0, #FF7F50);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .tagline {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .flowchart {
+            background-color: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 3rem;
+        }
+        .flow-step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        .flow-step:hover {
+            transform: translateX(10px);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        .step-number {
+            background-color: #FFD700;
+            color: #333;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+        .step-content {
+            flex-grow: 1;
+        }
+        .step-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #40E0D0;
+        }
+        .yes-path {
+            border-left: 4px solid #40E0D0;
+            padding-left: 1rem;
+            margin-left: 20px;
+        }
+        .no-path {
+            border-left: 4px solid #FF7F50;
+            padding-left: 1rem;
+            margin-left: 20px;
+        }
+        .destinations {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .destination-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .destination-card:hover {
+            transform: translateY(-10px);
+        }
+        .card-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+        .card-content {
+            padding: 1.5rem;
+        }
+        .card-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        .cta {
+            background: linear-gradient(135deg, #FF7F50, #FFD700);
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+            border-radius: 15px;
+            margin-top: 3rem;
+        }
+        form {
+            background-color: white;
+            padding: 2rem;
+            margin-top: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        form input,
+        form select {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+        form button {
+            background-color: #FF7F50;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #e76e3c;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">AAM Travel</div>
+        <div class="tagline">Perjalananmu, Semangat Kami - Jelajahi Dunia dengan Mudah</div>
+    </header>
+
+    <div class="container">
+        <h2>Bagaimana Cara Kerjanya</h2>
+        <p>Proses pemesanan kami yang sederhana membuat perencanaan perjalanan menjadi mudah</p>
+
+        <!-- Flowchart steps -->
+        <div class="flowchart">
+            <!-- Langkah 1 sampai 6 dan cabang yes/no -->
+            <!-- Tidak diubah karena sudah sesuai -->
+            <div class="flow-step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <div class="step-title">Pilih Destinasi Anda</div>
+                    <p>Pilih dari berbagai lokasi indah yang kami tawarkan</p>
+                </div>
+            </div>
+
+            <div class="yes-path">
+                <div class="flow-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <div class="step-title">Cek Ketersediaan Tanggal</div>
+                        <p>Kami akan memeriksa apakah tanggal perjalanan Anda tersedia</p>
+                    </div>
+                </div>
+
+                <div class="yes-path">
+                    <div class="flow-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <div class="step-title">Informasi Penumpang</div>
+                            <p>Isi detail siapa saja yang akan bepergian</p>
+                        </div>
+                    </div>
+
+                    <div class="yes-path">
+                        <div class="flow-step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <div class="step-title">Detail Destinasi</div>
+                                <p>Pilih aktivitas dan akomodasi yang Anda sukai</p>
+                            </div>
+                        </div>
+
+                        <div class="yes-path">
+                            <div class="flow-step">
+                                <div class="step-number">5</div>
+                                <div class="step-content">
+                                    <div class="step-title">Jenis Transportasi</div>
+                                    <p>Pilih moda transportasi pilihan Anda</p>
+                                </div>
+                            </div>
+
+                            <div class="yes-path">
+                                <div class="flow-step">
+                                    <div class="step-number">6</div>
+                                    <div class="step-content">
+                                        <div class="step-title">Pembayaran & Tiket</div>
+                                        <p>Selesaikan pembayaran dan terima tiket Anda</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="no-path">
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <div class="step-title">Opsi Alternatif</div>
+                            <p>Kami bantu Anda menemukan destinasi serupa yang tersedia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="no-path">
+                <div class="flow-step">
+                    <div class="step-content">
+                        <div class="step-title">Destinasi Tidak Tersedia</div>
+                        <p>Kami akan menyarankan destinasi serupa yang mungkin Anda sukai</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2>Destinasi Populer</h2>
+        <p>Jelajahi paket perjalanan kami yang paling diminati</p>
+
+        <div class="destinations">
+            <div class="destination-card">
+                <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                <div class="card-content">
+                    <h3 class="card-title">Surga Bali</h3>
+                    <p>7 hari di surga tropis dengan akomodasi mewah</p>
+                </div>
+            </div>
+
+            <div class="destination-card">
+                <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1503917988258-f87a78e3c995?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                <div class="card-content">
+                    <h3 class="card-title">Petualangan Jepang</h3>
+                    <p>10 hari menjelajahi Tokyo, Kyoto, dan Gunung Fuji</p>
+                </div>
+            </div>
+
+            <div class="destination-card">
+                <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                <div class="card-content">
+                    <h3 class="card-title">Impian Eropa</h3>
+                    <p>14 hari mengunjungi Paris, Roma, dan Barcelona</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta">
+            <h2>Siap untuk Petualangan Selanjutnya?</h2>
+            <p>Pesan sekarang dan dapatkan diskon 10% untuk perjalanan pertamamu!</p>
+        </div>
+
+        <form action="#" method="post">
+            <h2>Formulir Pemesanan Perjalanan</h2>
+
+            <label>Nama Lengkap:</label>
+            <input type="text" name="nama" required>
+
+            <label>Email:</label>
+            <input type="email" name="email" required>
+
+            <label>Nomor HP:</label>
+            <input type="tel" name="hp" required>
+
+            <label>Tanggal Lahir:</label>
+            <input type="date" name="tanggal" required>
+
+            <label>Tanggal Keberangkatan:</label>
+            <input type="date" name="tanggal" required>
+
+            <label>Destinasi:</label>
+            <select name="destinasi" required>
+                <option value="">-- Pilih Destinasi --</option>
+                <option value="Bali">Surga Bali</option>
+                <option value="Jepang">Petualangan Jepang</option>
+                <option value="Eropa">Impian Eropa</option>
+            </select>
+
+            <label>Jenis Transportasi:</label>
+            <select name="transportasi" required>
+                <option value="">-- Pilih Transportasi --</option>
+                <option value="Pesawat">Pesawat</option>
+                <option value="Kereta">Kereta</option>
+                <option value="Bus">Bus</option>
+            </select>
+
+            <label>Jenis Pembayaran </label>
+            <select name="pembayaran" required>
+                <option value="">-- Pilih Jenis Pembayaran --</option>
+                <option value="Pesawat">Dana</option>
+                <option value="Kereta">Ovo</option>
+                <option value="Bus">Gopay</option>
+            </select>
+
+            <button type="submit">Kirim Pemesanan</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 AAM Travel. Seluruh hak cipta dilindungi.</p>
+        <p>Hubungi kami: ahabibie798@gmail.com | +62 816 1774 7584</p>
+    </footer>
+</body>
+</html>
